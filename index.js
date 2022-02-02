@@ -2,3 +2,8 @@
 let findMatching = (listOfDrivers, searchedDriver) => {
    return listOfDrivers.filter( driverName => {  return driverName.toLowerCase() === searchedDriver.toLowerCase() });
 }
+
+// Returns a driver if beginning provided charaters match with passed matchingLetters
+let fuzzyMatch = (listOfDrivers, matchingLetters) => {
+   return listOfDrivers.filter( driverName => {  return driverName.substring(0, 2) === matchingLetters });
+}
